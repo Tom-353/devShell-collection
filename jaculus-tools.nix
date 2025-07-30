@@ -6,16 +6,16 @@
 
 buildNpmPackage (finalAttrs: {
   pname = "jaculus-tools";
-  version = "0.0.23";
+  version = "0.0.26";
 
   src = fetchFromGitHub {
     owner = "cubicap";
     repo = "Jaculus-tools";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-CKn37CHtxYx/CTC9zdm1+Hz+79tDdQIzwjE2FAfL+hg=";
+    hash = "sha256-WzdLKwCQ/tRBq5N9uLfbsoGNcRuet8edeS++ECoaKnY=";
   };
 
-  npmDepsHash = "sha256-eQRVRMsBMqArTnAoDHXKjTnOBfbp1FbMkr2gFbC0qdg=";
+  npmDepsHash = "sha256-A2qYUaMvOjMEgOqToCJnIkcmsh+VCb8LLwODSsYDFLc=";
 
   # The prepack script runs the build script, which we'd rather do in the build phase.
   npmPackFlags = [ "--ignore-scripts" ];
